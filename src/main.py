@@ -2,8 +2,8 @@ from typing import Union
 
 from fastapi import FastAPI
 
-from database import Database
-from person import Person
+from src.database import Database
+from src.person import Person
 
 app = FastAPI()
 
