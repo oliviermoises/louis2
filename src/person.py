@@ -8,8 +8,3 @@ class Person:
         self.name = name 
 
 
-
-p1 = Person("olivier")
-
-print (p1.gender)
-print (p1.name)
