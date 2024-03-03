@@ -1,1 +1,1 @@
-# louis2
+# demarrage: uvicorn src.main:app --reload
