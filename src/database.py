@@ -7,10 +7,10 @@ class Database:
         self.__internal_index = 0
 
     def create(self, record: Person) -> int:
-        current_index = self.__internal_index
-        self.__d[current_index] = record
+        record.id = self.__internal_index
+        self.__d[record.id] = record
         self.__internal_index += 1
-        return current_index
+        return record.id
 
     def update(self, index, record: Person):
         self.__d[index] = record

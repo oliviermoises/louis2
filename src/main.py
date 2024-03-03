@@ -13,12 +13,18 @@ database.create(Person("olivier"))
 database.create(Person("louis"))
 database.create(Person("Alexandre"))
 
-
+# renvoie toutes les personnes
 @app.get("/api/persons")
 def list_persons():
     return database.list_records()
 
-
+# renvoie une personne dont l'id est passé
 @app.get("/api/persons/{person_id}")
 def read_person(person_id: int):
     return database.read(person_id)
+
+
+# suppr une personne dont l'id est passé
+@app.delete("/api/persons/{person_id}")
+def delete_person(person_id: int):
+    database.delete(person_id)

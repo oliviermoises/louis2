@@ -1,4 +1,5 @@
 class Person:
+    id : None
     gender = None
     name = None
     weight = 0
