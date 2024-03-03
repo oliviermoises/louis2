@@ -9,9 +9,6 @@ app = FastAPI()
 
 
 database = Database()
-database.create(Person("olivier"))
-database.create(Person("louis"))
-database.create(Person("Alexandre"))
 
 # renvoie toutes les personnes
 @app.get("/api/persons")
@@ -28,3 +25,7 @@ def read_person(person_id: int):
 @app.delete("/api/persons/{person_id}")
 def delete_person(person_id: int):
     database.delete(person_id)
+
+@app.post("/api/persons")
+def create_person(person:Person):
+    database.create(person)

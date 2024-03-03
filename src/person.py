@@ -1,11 +1,6 @@
-class Person:
-    id : None
-    gender = None
-    name = None
-    weight = 0
-    size = 0
-
-    def __init__(self, name) -> None:
-        self.name = name 
+from pydantic import BaseModel
 
 
+class Person(BaseModel):
+    id: int | None = None
+    name: str
